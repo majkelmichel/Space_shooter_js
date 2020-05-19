@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto;
+    background-color: black;
+}
+#playField {
+    width: 100vw;
+    background-color: blue;
+    min-height: 100vh;
+}
+#player {
+    background-image: url(img/ship.png);
+    width: 144px;
+    height: 179px;
+    position: absolute;
+    bottom: 2%;
+    left: 45%;
+}
