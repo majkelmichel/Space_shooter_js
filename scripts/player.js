@@ -5,10 +5,12 @@ var ship = function () {
     this.height = 179;
     this.width = 144;
     this.healthPoints = 100;
+    
     this.htmlObj = document.getElementById("player");
     const element = document.querySelector('#player');
     const style = getComputedStyle(element);
     this.left = parseInt(style.left);
+    
     this.moveLeft = function () {
         this.left -= 5;
         this.left = Math.max(this.left, leftOffset);
