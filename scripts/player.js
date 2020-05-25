@@ -1,4 +1,5 @@
-const pageWidth = $(window).width();
+var leftOffset = document.getElementById('healthBar').offsetWidth;
+var playFieldWidth = document.getElementById('playField').offsetWidth + leftOffset;
 
 var ship = function () {
     this.height = 179;
@@ -10,21 +11,19 @@ var ship = function () {
     this.left = parseInt(style.left);
     this.moveLeft = function () {
         this.left -= 5;
-        this.left = Math.max(this.left, 0);
+        this.left = Math.max(this.left, leftOffset);
         var l = this.left.toString();
         l += "px";
         this.htmlObj.style.left = l;
     }
     this.moveRight = function () {
         this.left += 5;
-        this.left = Math.min(this.left, pageWidth - this.width);
+        this.left = Math.min(this.left, playFieldWidth - this.width);
         var r = this.left.toString();
         r += "px";
         this.htmlObj.style.left = r;
     }
 }
-
-
 
 var player = new ship();
 
@@ -40,3 +39,8 @@ function checkKey(e) {
         player.moveRight();
     }
 }
+
+setInterval(function () {
+    leftOffset = document.getElementById('healthBar').offsetWidth;
+    playFieldWidth = document.getElementById('playField').offsetWidth + leftOffset;
+}, 100);

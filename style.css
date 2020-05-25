@@ -3,7 +3,7 @@ body {
     background-color: black;
 }
 #playField {
-    width: 100vw;
+    grid-area: "play";
     background-color: blue;
     min-height: 100vh;
 }
@@ -14,4 +14,25 @@ body {
     position: absolute;
     bottom: 2%;
     left: 45%;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "leftP play rightP"
+        "hp play points";
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 90vh 10vh;
+}
+
+#healthBar {
+    grid-area: hp;
+    background-color: red;
+}
+
+#leftPanel {
+    grid-area: leftP;
+}
+#points {
+    grid-area: points;
+    background-color: green;
 }
