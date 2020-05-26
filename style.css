@@ -5,7 +5,6 @@ body {
 #playField {
     grid-area: "play";
     background-color: blue;
-    min-height: 100vh;
 }
 #player {
     background-image: url(img/ship.png);

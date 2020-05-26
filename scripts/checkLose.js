@@ -5,8 +5,13 @@ var currentY = parseInt(getComputedStyle(document.getElementById("1")).top); // 
 
 var intervalY = setInterval(function () {
 	currentY = parseInt(getComputedStyle(document.getElementById("1")).top);
-}, 50); // Stałe zmniana wartości currentY
+}, 50); // Stale zmniana wartości currentY
 
-while (height - 100 < currentY) {
-	console.log("yeeeeeet");
-};
+var intervalCheck = setInterval(function () {
+	if (height - 100 < currentY) {
+		console.log("yeet");
+		document.getElementById(ufo1.id).outerHTML = "";
+		clearInterval(intervalY);
+		clearInterval(intervalCheck);
+	}
+}, 50);

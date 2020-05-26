@@ -46,5 +46,5 @@ var ufo1 = new ufo(x, id++);
 var ufo2 = new ufo(x + 200, id++);
 ufo1.drawImg();
 ufo2.drawImg();
-int1 = setInterval(ufo1.updateCSS, 50);
+int1 = setInterval(ufo1.updateCSS, 5);
 int2 = setInterval(ufo2.updateCSS, 1000);
