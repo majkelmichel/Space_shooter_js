@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template-areas: 
         "leftP play rightP"
-        "hp play points";
+        "hp lose points";
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-rows: 90vh 10vh;
 }
@@ -35,4 +35,8 @@ body {
 #points {
     grid-area: points;
     background-color: green;
+}
+#loseArea {
+	grid-area: lose;
+	background-color: darkblue;
 }
