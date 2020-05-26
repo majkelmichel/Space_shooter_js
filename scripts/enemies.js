@@ -1,11 +1,11 @@
 var leftOffset = document.getElementById('healthBar').offsetWidth;
 
-var ufo = function (x) {
+var ufo = function (x, id) {
     this.x = x;
     this.y = 10;
     this.height = 100;
     this.width = 100;
-    
+    this.id = id;
     this.x = Math.min(this.x, document.getElementById('playField').offsetWidth - this.width);
 }
 var x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
@@ -23,11 +23,11 @@ ufo.prototype.drawImg = function () {
 };
 
 ufo.prototype.updateCSS = function (y) {
-    this.imgElement.css({
-        position: "absolute",
-        left: this.x + leftOffset,
-        top: y
-    });
+    var prevY = this.imgElement[0].style.top;
+    prevY = parseInt(prevY);
+    prevY += 3;
+    var nextY = prevY + "px";
+    this.imgElement[0].style.top = nextY;
 }
 
 ufo.prototype.moveDown = function () {
@@ -44,4 +44,4 @@ ufo.prototype.moveDown = function () {
 
 var ufo1 = new ufo(x);
 ufo1.drawImg();
-int1 = setInterval(ufo1.updateCSS(ufo1.moveDown), 100);
+int1 = setInterval(ufo1.updateCSS, 100);
