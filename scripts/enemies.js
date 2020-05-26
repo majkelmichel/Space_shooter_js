@@ -1,6 +1,6 @@
 var leftOffset = document.getElementById('healthBar').offsetWidth;
 
-var ufo = function (x) {
+var ufo = function (x, id) {
     this.x = x;
     this.y = 10;
     this.height = 100;
@@ -9,7 +9,9 @@ var ufo = function (x) {
     
     var imgHtml = '<img src="img/ufo.png">';
     var imgElement = $(imgHtml);
-    
+	
+	imgElement.attr("id", id);
+	
     this.drawImg = function () {
         imgElement.css({
             position: "absolute",
@@ -29,8 +31,8 @@ var ufo = function (x) {
 }
 var x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 
+var id = 1;
 
-//
 //ufo.prototype.randomMove = function () {
 //    var randX = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 //    var distance = this.x - randX;
@@ -38,6 +40,9 @@ var x = Math.floor(Math.random() * document.getElementById('playField').offsetWi
 //};
 
 
-var ufo1 = new ufo(x);
+var ufo1 = new ufo(x, id++);
+var ufo2 = new ufo(x + 200, id++);
 ufo1.drawImg();
+ufo2.drawImg();
 int1 = setInterval(ufo1.updateCSS, 100);
+int2 = setInterval(ufo2.updateCSS, 100);
