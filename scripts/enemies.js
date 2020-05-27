@@ -40,5 +40,17 @@ var ufo1 = new ufo(x, id++);
 var ufo2 = new ufo(x + 200, id++);
 ufo1.drawImg();
 ufo2.drawImg();
-int1 = setInterval(ufo1.updateCSS, 5);
+int1 = setInterval(ufo1.updateCSS, 1005);
 int2 = setInterval(ufo2.updateCSS, 1000);
+
+var enemies = new Array();
+var intEnemies = new Array();
+
+for (var i = 0; i < 6; i++) {
+	x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
+	enemies.unshift(new ufo(x, id++));
+}
+for (var i = 0; i < 6; i++) {
+	enemies[i].drawImg();
+	intEnemies[i] = setInterval(enemies[i].updateCSS, 100);
+}
