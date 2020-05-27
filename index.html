@@ -4,14 +4,26 @@
         <meta charset="UTF-8">
         <title>Space Shooter</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="playField">
-            <div id="player"></div>
+        <div id="container" class="container">
+            <div id="leftPanel"></div>
+            <div id="healthBar" class="text">100</div>
+            <div id="playField">
+                <div id="player"></div>
+            </div>
+            <div id="loseArea"></div>
+            <div id="points">
+            	<div id="text" class="text">000000</div>
+            </div>
+            <div id="laser"></div>
         </div>
-        
         
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="scripts/player.js"></script>
+        <script src="scripts/enemies.js"></script>
+        <script src="scripts/checkLose.js"></script>
+        <script src="scripts/laser.js"></script>
     </body>
 </html>
