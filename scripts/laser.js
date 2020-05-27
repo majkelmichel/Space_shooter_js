@@ -19,12 +19,6 @@ var laserMoveRight = function () {
 	laser.style.left = laserPx;
 };
 
-var checkAccuracy = function () {
-	if (ufo2.x + leftOffset < (laserPosLeftValue + laserWidth) && (ufo2.x + ufo2.width + leftOffset) > laserPosLeftValue) {
-		console.log("hit");
-	}
-	return (ufo2.x + leftOffset < (laserPosLeftValue + laserWidth) && (ufo2.x + ufo2.width + leftOffset) > laserPosLeftValue);
-};
 
 function removeInPlace(array, item) { // Funkcja do usuwania elementy z tablicy
     var foundIndex, fromIndex;
