@@ -35,12 +35,6 @@ var x = Math.floor(Math.random() * document.getElementById('playField').offsetWi
 
 var id = 1;
 
-//ufo.prototype.randomMove = function () {
-//    var randX = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
-//    var distance = this.x - randX;
-//    return distance;
-//};
-
 
 var ufo1 = new ufo(x, id++);
 var ufo2 = new ufo(x + 200, id++);

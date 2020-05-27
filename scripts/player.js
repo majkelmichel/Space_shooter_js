@@ -36,10 +36,15 @@ function checkKey(e) {
     
     if (e.keyCode == '37') {
         player.moveLeft();
+		laserMoveLeft();
     }
     else if (e.keyCode == '39') {
         player.moveRight();
+		laserMoveRight();
     }
+	else if (e.keyCode == '32') {
+		laserAnimation();
+	}
 }
 
 setInterval(function () {

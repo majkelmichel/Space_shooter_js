@@ -13,6 +13,7 @@ body {
     position: absolute;
     bottom: 2%;
     left: 45%;
+	z-index: 10;
 }
 .container {
     display: grid;
@@ -38,4 +39,36 @@ body {
 #loseArea {
 	grid-area: lose;
 	background-color: darkblue;
+}
+#laser {
+	position: absolute;
+	background-image: url(img/laser.png);
+	width: 36px;
+	height: 1014px;
+	bottom: 7%;
+	left: calc(44% + 72px);
+	z-index: 2;
+	opacity: 0;
+	animation-name: shoot;
+	animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+}
+
+@keyframes shoot {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }
