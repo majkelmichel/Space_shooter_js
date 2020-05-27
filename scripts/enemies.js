@@ -52,5 +52,5 @@ for (var i = 0; i < 6; i++) {
 }
 for (var i = 0; i < 6; i++) {
 	enemies[i].drawImg();
-	intEnemies[i] = setInterval(enemies[i].updateCSS, 100);
+	intEnemies[i] = setInterval(enemies[i].updateCSS, 10);
 }

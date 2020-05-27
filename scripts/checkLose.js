@@ -11,3 +11,6 @@ var intervalCheck = setInterval(function () {
 		};
 	};
 }, 50);
+
+
+var health = 50;

@@ -3,21 +3,7 @@ var laserPosLeft = getComputedStyle(laser).left;
 var laserWidth = parseInt(getComputedStyle(laser).width);
 var laserPosLeftValue = parseFloat(laserPosLeft);
 
-
-var laserAnimation = function () {
-	laser.style.opacity = "0";
-	laser.style.webkitAnimationPlayState = "running";
-	checkAccuracy();
-	if (checkAccuracy()) {
-		console.log("check");
-		setTimeout(function () {
-			document.getElementById(ufo2.id).outerHTML = "";
-		}, 200);
-	}
-	setTimeout(function () {
-		laser.style.webkitAnimationPlayState = "paused";
-	}, 400);
-};
+var punkty = 0;
 
 var laserMoveLeft = function () {
 	laserPosLeftValue -= 5;
@@ -67,14 +53,13 @@ var laserAnimation = function () {
 		if (enemies[i].x + leftOffset < (laserPosLeftValue + laserWidth) && (enemies[i].x + enemies[i].width + leftOffset) > laserPosLeftValue) {
 			var zm = enemies[i];
 			console.log("check");
-			setTimeout(function () {
-				document.getElementById(zm.id).outerHTML = "";
-			}, 200);
+			document.getElementById(zm.id).outerHTML = "";
+			punkty += 100;
+			document.getElementById('text').innerHTML = punkty;
 			removeInPlace(enemies, enemies[i]);
 		}
 	}
-	
 	setTimeout(function () {
 		laser.style.webkitAnimationPlayState = "paused";
-	}, 400);
+	}, 199);
 };

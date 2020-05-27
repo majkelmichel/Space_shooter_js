@@ -34,7 +34,12 @@ body {
 }
 #points {
     grid-area: points;
-    background-color: green;
+    background-color: yellow;
+}
+#text {
+	font-family: 'Lato', sans-serif;
+	font-size: 40px;
+	text-align: center;
 }
 #loseArea {
 	grid-area: lose;
@@ -50,7 +55,7 @@ body {
 	z-index: 2;
 	opacity: 0;
 	animation-name: shoot;
-	animation-duration: 0.4s;
+	animation-duration: 0.2s;
 	animation-iteration-count: infinite;
 	animation-play-state: paused;
 }
@@ -59,14 +64,8 @@ body {
 	0% {
 		opacity: 0;
 	}
-	20% {
-		opacity: 0;
-	}
 	50% {
 		opacity: 1;
-	}
-	80% {
-		opacity: 0;
 	}
 	100% {
 		opacity: 0;
