@@ -8,7 +8,22 @@
     </head>
     <body>
         <div id="container" class="container">
-            <div id="leftPanel"></div>
+            <div id="leftPanel">
+            	<div id="controls">
+            		<span style="color: white; width: 10vw; text-align: center; float: left; font-size: 28px;">Controls</span>
+            		<img src="img/leftArr.png" style="width: 2.5vw; float: left; padding-left: 1vw;">
+            		<img src="img/rightArr.png" style="width: 2.5vw; float: right; padding-right: 1vw;">
+            		<img src="img/space.png" style="width: 8vw; padding-top: 1vw; padding-left: 1vw;">
+            	</div>
+            	<div id="levels">
+            		<div id="levelOne" onclick="levelOne()">Level 1</div>
+            		<div id="levelTwo" onclick="levelTwo()">Level 2</div>
+            		<div id="levelThree" onclick="levelThree()">Level 3</div>
+            		<div id="levelFour" onclick="levelFour()">Level 4</div>
+            		<div id="levelFive" onclick="levelFive()">Level 5</div>
+            		<div id="levelSix" onclick="levelSix()">Level 6</div>
+            	</div>
+            </div>
             <div id="healthBar" class="text">100</div>
             <div id="playField">
                 <div id="player"></div>
@@ -17,7 +32,7 @@
             <div id="points">
             	<div id="text" class="text">000000</div>
             </div>
-            <div id="laser"></div>
+            <div id="laser" class='laser'></div>
         </div>
         
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -25,5 +40,6 @@
         <script src="scripts/enemies.js"></script>
         <script src="scripts/checkLose.js"></script>
         <script src="scripts/laser.js"></script>
+        <script src="scripts/gameLogic.js"></script>
     </body>
 </html>

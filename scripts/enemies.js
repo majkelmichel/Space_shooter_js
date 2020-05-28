@@ -11,7 +11,6 @@ var ufo = function (x, id) {
     this.imgHtml = '<img src="img/ufo.png">';
     var imgElement = $(this.imgHtml);
 	
-	imgElement.attr("id", id);
 	
     this.drawImg = function () {
         imgElement.css({
@@ -20,8 +19,9 @@ var ufo = function (x, id) {
             top: this.y
         });
         $("body").append(imgElement);
+		imgElement.attr("id", id);
     };
-    
+	
     this.updateCSS = function () {
         var prevY = imgElement[0].style.top;
         prevY = parseInt(prevY);
@@ -34,23 +34,24 @@ var ufo = function (x, id) {
 var x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 
 var id = 1;
-
-
-var ufo1 = new ufo(x, id++);
-var ufo2 = new ufo(x + 200, id++);
-ufo1.drawImg();
-ufo2.drawImg();
-int1 = setInterval(ufo1.updateCSS, 1005);
-int2 = setInterval(ufo2.updateCSS, 1000);
+var enemiesLenght = 0;
 
 var enemies = new Array();
 var intEnemies = new Array();
+//
+//for (var i = 0; i < 2; i++) {
+//	x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
+//	enemies.unshift(new ufo(x, id++));
+//};
+//for (var i = 0; i < 2; i++) {
+//	enemies[i].drawImg();
+//	intEnemies[i] = (setInterval(enemies[i].updateCSS, 50));
+//	enemiesLenght++;
+//};
 
-for (var i = 0; i < 6; i++) {
+function spawnEnemies(speed) {
 	x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 	enemies.unshift(new ufo(x, id++));
-}
-for (var i = 0; i < 6; i++) {
-	enemies[i].drawImg();
-	intEnemies[i] = setInterval(enemies[i].updateCSS, 10);
-}
+	enemies[0].drawImg();
+	intEnemies[++enemiesLenght] = (setInterval(enemies[0].updateCSS, speed));
+};

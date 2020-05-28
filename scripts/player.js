@@ -12,14 +12,14 @@ var ship = function () {
     this.left = parseInt(style.left);
     
     this.moveLeft = function () {
-        this.left -= 5;
+        this.left -= 10;
         this.left = Math.max(this.left, leftOffset);
         var l = this.left.toString();
         l += "px";
         this.htmlObj.style.left = l;
     }
     this.moveRight = function () {
-        this.left += 5;
+        this.left += 10;
         this.left = Math.min(this.left, playFieldWidth - this.width);
         var r = this.left.toString();
         r += "px";
@@ -45,7 +45,7 @@ function checkKey(e) {
 	else if (e.keyCode == '32') {
 		laserAnimation();
 	}
-}
+};
 
 setInterval(function () {
     leftOffset = document.getElementById('healthBar').offsetWidth;

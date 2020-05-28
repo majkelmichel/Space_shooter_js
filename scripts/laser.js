@@ -6,14 +6,14 @@ var laserPosLeftValue = parseFloat(laserPosLeft);
 var punkty = 0;
 
 var laserMoveLeft = function () {
-	laserPosLeftValue -= 5;
+	laserPosLeftValue -= 10;
 	laserPosLeftValue = Math.max(laserPosLeftValue, leftOffset + 54);
 	var laserPx = laserPosLeftValue + 'px';
 	laser.style.left = laserPx;
 };
 
 var laserMoveRight = function () {
-	laserPosLeftValue += 5;
+	laserPosLeftValue += 10;
 	laserPosLeftValue = Math.min(laserPosLeftValue, playFieldWidth - laserWidth - 54);
 	var laserPx = laserPosLeftValue + 'px';
 	laser.style.left = laserPx;
@@ -52,7 +52,7 @@ var laserAnimation = function () {
 			document.getElementById('text').innerHTML = punkty;
 			removeInPlace(enemies, enemies[i]);
 		}
-	}
+	};
 	setTimeout(function () {
 		laser.style.webkitAnimationPlayState = "paused";
 	}, 199);
