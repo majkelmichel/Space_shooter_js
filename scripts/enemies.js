@@ -38,20 +38,10 @@ var enemiesLenght = 0;
 
 var enemies = new Array();
 var intEnemies = new Array();
-//
-//for (var i = 0; i < 2; i++) {
-//	x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
-//	enemies.unshift(new ufo(x, id++));
-//};
-//for (var i = 0; i < 2; i++) {
-//	enemies[i].drawImg();
-//	intEnemies[i] = (setInterval(enemies[i].updateCSS, 50));
-//	enemiesLenght++;
-//};
 
 function spawnEnemies(speed) {
 	x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 	enemies.unshift(new ufo(x, id++));
 	enemies[0].drawImg();
-	intEnemies[++enemiesLenght] = (setInterval(enemies[0].updateCSS, speed));
+	intEnemies[enemiesLenght++] = (setInterval(enemies[0].updateCSS, speed));
 };
