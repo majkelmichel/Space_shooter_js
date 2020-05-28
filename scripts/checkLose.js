@@ -18,4 +18,9 @@ var intervalCheck = setInterval(function () {
 	};
 }, 50);
 
-
+var checkHealth = setInterval(function () {
+	if (health <= 0) {
+		alert("Koniec Gry!");
+		location.reload();
+	}
+}, 50);
