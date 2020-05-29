@@ -29,7 +29,7 @@ var ufo = function (x, id) {
         imgElement[0].style.top = nextY;
 		this.y = prevY;
     };
-}
+};
 //var x = Math.floor(Math.random() * document.getElementById('playField').offsetWidth);
 
 var id = 1;
