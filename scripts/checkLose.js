@@ -7,9 +7,9 @@ var healthHtml = document.getElementById('healthBar');
 
 var intervalCheck = setInterval(function () {
 	for (var i = 0; i < enemies.length; i++) {
-		currentY = parseInt(getComputedStyle(document.getElementById(enemies[i].id)).top);
+		var currentY = parseInt(getComputedStyle(document.getElementById(enemies[i].id)).top);
 		if (height - 100 < currentY) {
-			console.log("yeet");
+//			console.log("yeet");
 			document.getElementById(enemies[i].id).outerHTML = "";
 			removeInPlace(enemies, enemies[i]);
 			health -= 10;

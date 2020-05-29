@@ -75,3 +75,16 @@ function levelSix() {
 		health = 100;
 	};
 };
+
+function level(speed, ilosc) {
+	var enemyCount = 0;
+	var intervalOne = setInterval(function () {
+		spawnEnemies(speed);
+		enemyCount++;
+	}, 1000);
+	if (enemyCount >= ilosc) {
+		clearInterval(intervalOne);
+		alert("Level Complete!");
+		health = 100;
+	};
+};

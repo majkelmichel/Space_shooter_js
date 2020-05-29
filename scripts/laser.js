@@ -46,7 +46,7 @@ var laserAnimation = function () {
 	for (var i = 0; i < enemies.length; i++) {
 		if (enemies[i].x + leftOffset < (laserPosLeftValue + laserWidth) && (enemies[i].x + enemies[i].width + leftOffset) > laserPosLeftValue) {
 			var zm = enemies[i];
-			console.log("check");
+//			console.log("check");
 			document.getElementById(zm.id).outerHTML = "";
 			punkty += 100;
 			document.getElementById('text').innerHTML = punkty;
