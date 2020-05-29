@@ -6,6 +6,7 @@ function levelOne() {
 	}, 1000);
 	if (enemyCount >= 15) {
 		clearInterval(intervalOne);
+		alert("Level Complete!");
 		health = 100;
 	};
 };
@@ -18,6 +19,7 @@ function levelTwo() {
 	}, 800);
 	if (enemyCount >= 30) {
 		clearInterval(intervalTwo);
+		alert("Level Complete!");
 		health = 100;
 	};
 };
@@ -30,6 +32,7 @@ function levelThree() {
 	}, 800);
 	if (enemyCount >= 30) {
 		clearInterval(intervalThree);
+		alert("Level Complete!");
 		health = 100;
 	};
 };
@@ -42,6 +45,7 @@ function levelFour() {
 	}, 800);
 	if (enemyCount >= 50) {
 		clearInterval(intervalFour);
+		alert("Level Complete!");
 		health = 100;
 	};
 };
@@ -54,18 +58,20 @@ function levelFive() {
 	}, 800);
 	if (enemyCount >= 100) {
 		clearInterval(intervalFive);
+		alert("Level Complete!");
 		health = 100;
 	};
 };
 
 function levelSix() {
 	var enemyCount = 0;
-	var intervalOne = setInterval(function () {
+	var intervalSix = setInterval(function () {
 		spawnEnemies(30);
 		enemyCount++;
 	}, 800);
 	if (enemyCount >= 150) {
 		clearInterval(intervalSix);
+		alert("Level Complete!");
 		health = 100;
 	};
 };

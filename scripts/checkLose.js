@@ -20,7 +20,7 @@ var intervalCheck = setInterval(function () {
 
 var checkHealth = setInterval(function () {
 	if (health <= 0) {
-		alert("Koniec Gry!");
+		alert("Game Over!");
 		location.reload();
 	}
 }, 50);
